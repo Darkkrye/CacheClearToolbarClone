@@ -2,17 +2,15 @@
 
 CacheClearToolbar is an addon to the Symfony Web Debug Toolbar.
 
+    The CacheClearToolbar design uses Bootstrap classes.
+    If you do not use it, the CacheClearToolbar will lose his awesome adapted design. ;)
+
 It allows you to quickly :
 * See the current route name,
 * Clear the dev cache and refresh the page,
 * Clear the prod cache and refresh the page,
 * Clear both cache and refresh the page or
 * Just refresh the page.
-
-
-
-    The CacheClearToolbar design uses Bootstrap classes.
-    If you do not use it, the CacheClearToolbar will lose his awesome adapted design. ;)
 
 ## Usage
 When the page is loaded, the Symfony Web Debug Toolbar is loaded. Just watch the last information in the Toolbar to see the CacheClearToolbar went alive.
@@ -57,4 +55,5 @@ app/config/routing.yml :
  - [ ] Add additional namespace,
  - [ ] Release to composer,
  - [ ] Change properties to only work in dev environment,
- - [ ] Add new route to just clear the cache and close the tab.
+ - [ ] Add new route to just clear the cache and close the tab,
+ - [ ] Add his own css rules.
