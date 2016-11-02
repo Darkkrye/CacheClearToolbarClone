@@ -1,0 +1,11 @@
+cache_clear:
+    path:     /cache_clear/{routeName}
+    defaults: { _controller: CacheClearToolbar:CacheClearToolbar:cacheClear }
+
+prod_cache_clear:
+    path:     /prod_cache_clear/{routeName}
+    defaults: { _controller: CacheClearToolbar:CacheClearToolbar:prodCacheClear }
+
+both_cache_clear:
+    path:     /both_cache_clear/{routeName}
+    defaults: { _controller: CacheClearToolbar:CacheClearToolbar:bothCacheClear }

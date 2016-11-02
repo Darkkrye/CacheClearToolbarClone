@@ -1,0 +1,57 @@
+{% extends 'WebProfilerBundle:Profiler:layout.html.twig' %}
+
+{% block toolbar %}
+
+    <div class="sf-toolbar-block">
+        {# ALWAYS VISIBLE #}
+        <div class="sf-toolbar-icon">
+            <a href="#">
+                {# style needs this img #}
+                {{ include("@CacheClearToolbar/Icons/trash.svg.twig") }}
+                <span class="sf-toolbar-status sf-toolbar-status-green">
+                    Cache Clear
+                </span>
+            </a>
+        </div>
+        {# ON HOVER #}
+        <div class="sf-toolbar-info" style="max-width:300px">
+            {# Current route #}
+            <div class="sf-toolbar-info-piece">
+                Current route : {{ collector.currentRoute }}
+            </div>
+
+            {# Clear Cache #}
+            <div class="sf-toolbar-info-piece">
+                <a href="{{ path('cache_clear', {'routeName': collector.currentRoute}) }}"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Clear Cache</button></a>
+            </div>
+
+            {# Clear Prod Cache #}
+            <div class="sf-toolbar-info-piece">
+                <a href="{{ path('prod_cache_clear', {'routeName': collector.currentRoute}) }}"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Clear Prod Cache</button></a>
+            </div>
+
+            {# Clear Both #}
+            <div class="sf-toolbar-info-piece">
+                <a href="{{ path('both_cache_clear', {'routeName': collector.currentRoute}) }}"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Clear Both</button></a>
+            </div>
+
+            {# Just refresh #}
+            <div class="sf-toolbar-info-piece">
+                <a href="{{ path(collector.currentRoute) }}"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;Just Refresh</button></a>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block menu %}
+
+{% endblock %}
+
+{% block panel %}
+
+{% endblock %}

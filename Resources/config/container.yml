@@ -1,0 +1,8 @@
+parameters:
+    cache_clear_toolbar.data_collector.template: "CacheClearToolbar:Collector:cacheClear"
+
+services:
+    data_collector.datacollector_cache_clear:
+        class: CacheClearToolbar\DataCollector\CacheClearDataCollector
+        tags:
+          - { name: data_collector, template: "%cache_clear_toolbar.data_collector.template%", id:"datacollector_cache_clear" }
