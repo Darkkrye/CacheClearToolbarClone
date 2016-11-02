@@ -30,22 +30,22 @@ When the page is loaded, the Symfony Web Debug Toolbar is loaded. Just watch the
 
 ### Register into AppKernel
 * Add the following code into AppKernel :
-
-app/AppKernel.php :
-
-    if (in_array($this->getEnvironment(), array('dev', 'test'))) {
-        [...]
-        $bundles[] = new CacheClearToolbar\CacheClearToolbar();
-    }
+```php
+// app/AppKernel.php
+if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+    [...]
+    $bundles[] = new CacheClearToolbar\CacheClearToolbar();
+}
+```
 
 ### Add to route file
 * Add the following code into main route file :
-
-app/config/routing.yml :
-
-    cache_clear_toolbar:
-        resource: "@CacheClearToolbar/Resources/config/routing.yml"
-        prefix: /cache_clear_toolbar
+```yml
+// app/config/routing.yml
+cache_clear_toolbar:
+    resource: "@CacheClearToolbar/Resources/config/routing.yml"
+    prefix: /cache_clear_toolbar
+```
 
 ### Reload
 * Reload and enjoy !
