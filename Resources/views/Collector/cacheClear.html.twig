@@ -5,20 +5,24 @@
     <div class="sf-toolbar-block">
         {# ALWAYS VISIBLE #}
         <div class="sf-toolbar-icon">
-            <a href="#">
-                {# style needs this img #}
-                {{ include("@CacheClearToolbar/Icons/trash.svg.twig") }}
-                <span class="sf-toolbar-status sf-toolbar-status-green">
-                    Cache Clear
-                </span>
-            </a>
+            {# style needs this img #}
+            {{ include("@CacheClearToolbar/Icons/trash.svg.twig") }}
+            <span class="sf-toolbar-status sf-toolbar-status-green">
+                Cache Clear
+            </span>
         </div>
         {# ON HOVER #}
         <div class="sf-toolbar-info" style="max-width:300px">
             {# Current route #}
             <div class="sf-toolbar-info-piece">
-                Current route : {{ collector.currentRoute }}
+                Current route :
             </div>
+
+            <div class="sf-toolbar-info-piece">
+                <b>{{ collector.currentRoute }}</b>
+            </div>
+
+            <hr />
 
             {# Clear Cache #}
             <div class="sf-toolbar-info-piece">
@@ -34,6 +38,8 @@
             <div class="sf-toolbar-info-piece">
                 <a href="{{ path('both_cache_clear', {'routeName': collector.currentRoute}) }}"><button class="btn btn-success btn-xs"><span class="glyphicon glyphicon-trash"></span>&nbsp;&nbsp;Clear Both</button></a>
             </div>
+
+            <hr />
 
             {# Just refresh #}
             <div class="sf-toolbar-info-piece">
