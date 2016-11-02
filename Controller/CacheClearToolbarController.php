@@ -22,14 +22,14 @@ class CacheClearToolbarController extends Controller
         $this->remove("dev");
         $this->remove("prod");
 
-        return $this->redirect($this->generateUrl('doc_ios'));
+        return $this->redirect($this->generateUrl($routeName));
     }
 
     private function remove($env) {
         $path = dirname(getcwd());
         $path = $path . "/var/cache/" . $env;
 
-        if (isset($path)) {
+        if (file_exists($path)) {
             $this->rmdir_recursive($path);
         }
     }
