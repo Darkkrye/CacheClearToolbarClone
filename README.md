@@ -56,4 +56,5 @@ app/config/routing.yml :
  - [ ] Release to composer,
  - [ ] Change properties to only work in dev environment,
  - [ ] Add new route to just clear the cache and close the tab,
- - [ ] Add his own css rules.
+ - [ ] Add his own css rules,
+ - [ ] Create Symfony project which implements the CacheClearToolbar.
