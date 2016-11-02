@@ -9,6 +9,8 @@ It allows you to quickly :
 * Clear both cache and refresh the page or
 * Just refresh the page.
 
+
+
     The CacheClearToolbar design uses Bootstrap classes.
     If you do not use it, the CacheClearToolbar will lose his awesome adapted design. ;)
 
