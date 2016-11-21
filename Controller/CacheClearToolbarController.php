@@ -29,7 +29,7 @@ class CacheClearToolbarController extends Controller
         $path = dirname(getcwd());
         $path = $path . "/var/cache/" . $env;
 
-        if (file_exists($path)) {
+        if (is_dir($path)) {
             $this->rmdir_recursive($path);
         }
     }
