@@ -3,6 +3,7 @@
     "description": "CacheClearToolbar is an addon to the Symfony Web Debug Toolbar.",
     "homepage": "https://github.com/Darkkrye/CacheClearToolbarClone",
     "type": "library",
+    "minimum-stability": "dev",
     "require-dev": {
         "symfony/symfony": "3.*"
     },
