@@ -1,0 +1,25 @@
+{
+    "name": "darkkrye/cache-clear-toolbar-clone",
+    "description": "CacheClearToolbar is an addon to the Symfony Web Debug Toolbar.",
+    "homepage": "https://github.com/Darkkrye/CacheClearToolbarClone",
+    "type": "library",
+    "require-dev": {
+        "symfony/symfony": "3.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Darkkrye",
+            "email": "pierre.boudon.27@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Darkkrye\\CacheClearToolbar": ""
+        }
+    }
+
+}
